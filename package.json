@@ -82,7 +82,8 @@
     "ws": "^8.18.0",
     "xlsx": "^0.18.5",
     "zod": "^3.25.76",
-    "zod-validation-error": "^3.4.0"
+    "zod-validation-error": "^3.4.0",
+	"tsx": "^4.20.4"
   },
   "devDependencies": {
     "@replit/vite-plugin-cartographer": "^0.4.4",
@@ -111,7 +112,7 @@
   },
   "overrides": {
     "drizzle-kit": {
-      "@esbuild-kit/esm-loader": "npm:tsx@^4.20.4"
+     "tsx": "^4.20.4"
     }
   },
   "optionalDependencies": {
