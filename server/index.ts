@@ -1,24 +1,3 @@
-import express from "express";
-import path from "path";
-
-const app = express();
-
-app.use(express.json());
-
-app.use("/api", require("./routes"));
-
-const distPath = path.join(process.cwd(), "dist");
-
-app.use(express.static(distPath));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(distPath, "index.html"));
-});
-
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
-===========================================
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
